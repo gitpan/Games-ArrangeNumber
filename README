@@ -2,8 +2,13 @@ NAME
     Games::ArrangeNumber - Arrange number game
 
 VERSION
-    This document describes version 0.01 of Games::ArrangeNumber (from Perl
+    This document describes version 0.02 of Games::ArrangeNumber (from Perl
     distribution Games-ArrangeNumber), released on 2014-08-07.
+
+TODO
+    *   Record and save high scores
+
+    *   Save unfinished game
 
 HOMEPAGE
     Please visit the project's homepage at

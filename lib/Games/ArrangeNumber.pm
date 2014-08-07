@@ -1,7 +1,7 @@
 package Games::ArrangeNumber;
 
 our $DATE = '2014-08-07'; # DATE
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 use Color::ANSI::Util qw(ansibg ansifg);
 use List::Util qw(shuffle);
@@ -60,6 +60,7 @@ sub draw_board {
     my $w = $s > 3 ? 2 : 1; # width of number
     $buf = "";
     $buf .= "How to play: press arrow keys to arrange the numbers.\n";
+    $buf .= "  Press R to restart. Q to quit.\n";
     $buf .= "\n";
     $buf .= sprintf("Moves: %3d   | Time: %d\n", $self->num_moves,
                     time-$self->start_time);
@@ -259,9 +260,19 @@ Games::ArrangeNumber - Arrange number game
 
 =head1 VERSION
 
-This document describes version 0.01 of Games::ArrangeNumber (from Perl distribution Games-ArrangeNumber), released on 2014-08-07.
+This document describes version 0.02 of Games::ArrangeNumber (from Perl distribution Games-ArrangeNumber), released on 2014-08-07.
 
 =for Pod::Coverage ^(.+)$
+
+=head1 TODO
+
+=over
+
+=item * Record and save high scores
+
+=item * Save unfinished game
+
+=back
 
 =head1 HOMEPAGE
 
