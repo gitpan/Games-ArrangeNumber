@@ -2,8 +2,8 @@ NAME
     Games::ArrangeNumber - Arrange number game
 
 VERSION
-    This document describes version 0.03 of Games::ArrangeNumber (from Perl
-    distribution Games-ArrangeNumber), released on 2014-08-11.
+    This document describes version 0.04 of Games::ArrangeNumber (from Perl
+    distribution Games-ArrangeNumber), released on 2014-08-12.
 
 SYNOPSIS
      % arrange-number
