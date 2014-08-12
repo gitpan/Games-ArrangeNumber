@@ -1,7 +1,7 @@
 package Games::ArrangeNumber;
 
-our $DATE = '2014-08-07'; # DATE
-our $VERSION = '0.02'; # VERSION
+our $DATE = '2014-08-11'; # DATE
+our $VERSION = '0.03'; # VERSION
 
 use Color::ANSI::Util qw(ansibg ansifg);
 use List::Util qw(shuffle);
@@ -219,20 +219,22 @@ sub run {
     $self->init;
     $self->new_game;
     my $ticks = 0;
+  GAME:
     while (1) {
-        my $key = $self->read_key // '';
-        if ($key eq 'q' || $key eq 'Q') {
-            last;
-        } elsif ($key eq 'r' || $key eq 'R') {
-            $self->new_game;
-        } elsif ($key eq "\e[D") { # left arrow
-            $self->move("right");
-        } elsif ($key eq "\e[A") { # up arrow
-            $self->move("down");
-        } elsif ($key eq "\e[C") { # right arrow
-            $self->move("left");
-        } elsif ($key eq "\e[B") { # down arrow
-            $self->move("up");
+        while (defined(my $key = $self->read_key)) {
+            if ($key eq 'q' || $key eq 'Q') {
+                last GAME;
+            } elsif ($key eq 'r' || $key eq 'R') {
+                $self->new_game;
+            } elsif ($key eq "\e[D") { # left arrow
+                $self->move("right");
+            } elsif ($key eq "\e[A") { # up arrow
+                $self->move("down");
+            } elsif ($key eq "\e[C") { # right arrow
+                $self->move("left");
+            } elsif ($key eq "\e[B") { # down arrow
+                $self->move("up");
+            }
         }
         $self->draw_board;
         if ($self->has_won) {
@@ -260,7 +262,11 @@ Games::ArrangeNumber - Arrange number game
 
 =head1 VERSION
 
-This document describes version 0.02 of Games::ArrangeNumber (from Perl distribution Games-ArrangeNumber), released on 2014-08-07.
+This document describes version 0.03 of Games::ArrangeNumber (from Perl distribution Games-ArrangeNumber), released on 2014-08-11.
+
+=head1 SYNOPSIS
+
+ % arrange-number
 
 =for Pod::Coverage ^(.+)$
 
@@ -272,7 +278,13 @@ This document describes version 0.02 of Games::ArrangeNumber (from Perl distribu
 
 =item * Save unfinished game
 
+=item * Add some animation when moving tiles
+
 =back
+
+=head1 SEE ALSO
+
+L<arrange-number>
 
 =head1 HOMEPAGE
 

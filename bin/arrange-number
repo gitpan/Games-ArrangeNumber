@@ -1,7 +1,7 @@
 #!perl
 
-our $DATE = '2014-08-07'; # DATE
-our $VERSION = '0.02'; # VERSION
+our $DATE = '2014-08-11'; # DATE
+our $VERSION = '0.03'; # VERSION
 
 use Games::ArrangeNumber;
 use Getopt::Long qw(:config bundling auto_version auto_help);
@@ -33,7 +33,7 @@ arrange-number - Arrange number game
 
 =head1 VERSION
 
-This document describes version 0.02 of arrange-number (from Perl distribution Games-ArrangeNumber), released on 2014-08-07.
+This document describes version 0.03 of arrange-number (from Perl distribution Games-ArrangeNumber), released on 2014-08-11.
 
 =head1 SYNOPSIS
 
