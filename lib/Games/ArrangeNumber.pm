@@ -1,7 +1,7 @@
 package Games::ArrangeNumber;
 
-our $DATE = '2014-08-12'; # DATE
-our $VERSION = '0.04'; # VERSION
+our $DATE = '2015-01-03'; # DATE
+our $VERSION = '0.05'; # VERSION
 
 use Color::ANSI::Util qw(ansibg ansifg);
 use List::Util qw(shuffle);
@@ -262,25 +262,13 @@ Games::ArrangeNumber - Arrange number game
 
 =head1 VERSION
 
-This document describes version 0.04 of Games::ArrangeNumber (from Perl distribution Games-ArrangeNumber), released on 2014-08-12.
+This document describes version 0.05 of Games::ArrangeNumber (from Perl distribution Games-ArrangeNumber), released on 2015-01-03.
 
 =head1 SYNOPSIS
 
  % arrange-number
 
 =for Pod::Coverage ^(.+)$
-
-=head1 TODO
-
-=over
-
-=item * Record and save high scores
-
-=item * Save unfinished game
-
-=item * Add some animation when moving tiles
-
-=back
 
 =head1 SEE ALSO
 
@@ -304,11 +292,11 @@ feature.
 
 =head1 AUTHOR
 
-Steven Haryanto <stevenharyanto@gmail.com>
+perlancar <perlancar@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Steven Haryanto.
+This software is copyright (c) 2015 by perlancar@cpan.org.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
